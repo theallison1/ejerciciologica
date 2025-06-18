@@ -53,7 +53,6 @@
 ### Notas:
 - Usé símbolos estándar:  
   `¬` = negación, `∧` = AND, `∨` = OR, `→` = implicación, `↔` = bicondicional.
-- Las fórmulas están en formato de código (`texto entre backticks`) para mejor legibilidad.
 
 
 
@@ -134,3 +133,82 @@
 - **Tautología**: Siempre verdadera
 - **Contingencia**: Depende de los valores de verdad
 - **Contradicción**: Siempre falsa (no aparece en estos ejemplos)
+
+
+
+# Ejercicios de Simplificación Lógica
+
+## 1. ¬(p → q) ∨ (q → r)
+**Fórmula original:**  
+¬(p → q) ∨ (q → r)
+
+**Pasos de simplificación:**
+1. ¬(¬p ∨ q) ∨ (¬q ∨ r)  [A → B ≡ ¬A ∨ B]
+2. (p ∧ ¬q) ∨ ¬q ∨ r      [Ley de De Morgan y doble negación]
+3. (p ∨ ¬q ∨ r) ∧ (¬q ∨ ¬q ∨ r) [Distributiva]
+4. ¬q ∨ r                 [Absorción]
+
+**Resultado final:**  
+`¬q ∨ r`
+
+## 2. (p ∨ q) ∧ (¬p ∨ r)
+**Fórmula original:**  
+(p ∨ q) ∧ (¬p ∨ r)
+
+**Pasos de simplificación:**
+1. (p ∧ ¬p) ∨ (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r) [Distributiva completa]
+2. F ∨ (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)        [p ∧ ¬p ≡ F]
+3. (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)            [F ∨ A ≡ A]
+
+**Resultado final:**  
+`(p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)`
+
+## 3. ¬(¬p ∧ ¬q)
+**Fórmula original:**  
+¬(¬p ∧ ¬q)
+
+**Pasos de simplificación:**
+1. p ∨ q [Ley de De Morgan]
+
+**Resultado final:**  
+`p ∨ q`
+
+## 4. (p → q) ∧ ¬q
+**Fórmula original:**  
+(p → q) ∧ ¬q
+
+**Pasos de simplificación:**
+1. (¬p ∨ q) ∧ ¬q      [A → B ≡ ¬A ∨ B]
+2. (¬p ∧ ¬q) ∨ (q ∧ ¬q) [Distributiva]
+3. ¬p ∧ ¬q            [q ∧ ¬q ≡ F, F ∨ A ≡ A]
+
+**Resultado final:**  
+`¬p ∧ ¬q`
+
+## 5. (p → r) ∧ (q → r)
+**Fórmula original:**  
+(p → r) ∧ (q → r)
+
+**Pasos de simplificación:**
+1. (¬p ∨ r) ∧ (¬q ∨ r) [A → B ≡ ¬A ∨ B]
+2. (¬p ∧ ¬q) ∨ r       [Distributiva y absorción]
+
+**Resultado final:**  
+`(¬p ∧ ¬q) ∨ r`
+
+## Resumen de Simplificaciones
+
+| Fórmula original         | Resultado simplificado     |
+|--------------------------|----------------------------|
+| ¬(p → q) ∨ (q → r)       | ¬q ∨ r                     |
+| (p ∨ q) ∧ (¬p ∨ r)       | (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)|
+| ¬(¬p ∧ ¬q)               | p ∨ q                      |
+| (p → q) ∧ ¬q             | ¬p ∧ ¬q                    |
+| (p → r) ∧ (q → r)        | (¬p ∧ ¬q) ∨ r              |
+
+**Leyes utilizadas:**
+- Ley de implicación: `A → B ≡ ¬A ∨ B`
+- Ley de De Morgan: `¬(A ∧ B) ≡ ¬A ∨ ¬B`, `¬(A ∨ B) ≡ ¬A ∧ ¬B`
+- Ley distributiva: `A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)`
+- Ley de absorción: `A ∨ (A ∧ B) ≡ A`
+- Complementación: `A ∧ ¬A ≡ F`, `A ∨ F ≡ A`
