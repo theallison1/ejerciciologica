@@ -206,9 +206,86 @@
 | (p → q) ∧ ¬q             | ¬p ∧ ¬q                    |
 | (p → r) ∧ (q → r)        | (¬p ∧ ¬q) ∨ r              |
 
+
+
+
+
+
+# Simplificación de Fórmulas Lógicas - Guía para Exámenes
+
+## 📚 Conceptos Clave para Simplificación
+
+### Leyes Fundamentales
+1. **Implicación:** `A → B ≡ ¬A ∨ B`
+2. **De Morgan:**
+   - `¬(A ∧ B) ≡ ¬A ∨ ¬B`
+   - `¬(A ∨ B) ≡ ¬A ∧ ¬B`
+3. **Doble Negación:** `¬¬A ≡ A`
+4. **Distributiva:**
+   - `A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)`
+   - `A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C)`
+5. **Absorción:** `A ∨ (A ∧ B) ≡ A`
+6. **Contradicción:** `A ∧ ¬A ≡ F`
+7. **Identidad:** `A ∨ F ≡ A`
+
+## 📝 Ejercicios Resueltos
+
+### 1. ¬(p → q) ∨ (q → r) → ¬q ∨ r
+**Pasos:**
+1. Aplicar implicación:
+   - ¬(¬p ∨ q) ∨ (¬q ∨ r)
+2. Aplicar De Morgan:
+   - (p ∧ ¬q) ∨ ¬q ∨ r
+3. Absorción:
+   - ¬q ∨ r
 **Leyes utilizadas:**
 - Ley de implicación: `A → B ≡ ¬A ∨ B`
 - Ley de De Morgan: `¬(A ∧ B) ≡ ¬A ∨ ¬B`, `¬(A ∨ B) ≡ ¬A ∧ ¬B`
 - Ley distributiva: `A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)`
 - Ley de absorción: `A ∨ (A ∧ B) ≡ A`
 - Complementación: `A ∧ ¬A ≡ F`, `A ∨ F ≡ A`
+
+
+**Pasos:**
+1. Distributiva completa:
+   - (p ∧ ¬p) ∨ (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)
+2. Simplificar contradicción:
+   - F ∨ (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)
+3. Eliminar F:
+   - (p ∧ r) ∨ (q ∧ ¬p) ∨ (q ∧ r)
+
+
+
+
+**Pasos:**
+1. Aplicar De Morgan:
+   - p ∨ q
+  
+
+
+**Pasos:**
+1. Aplicar implicación:
+   - (¬p ∨ q) ∧ ¬q
+2. Distributiva:
+   - (¬p ∧ ¬q) ∨ (q ∧ ¬q)
+3. Simplificar:
+   - (¬p ∧ ¬q) ∨ F
+   - ¬p ∧ ¬q
+  
+
+
+
+**Pasos:**
+1. Aplicar implicación:
+   - (¬p ∨ r) ∧ (¬q ∨ r)
+2. Factorizar r:
+   - (¬p ∧ ¬q) ∨ r
+  
+
+Primero: Eliminar todas las implicaciones usando A → B ≡ ¬A ∨ B
+
+Luego: Aplicar De Morgan para simplificar negaciones
+
+Después: Usar distributiva para reordenar la expresión
+
+Finalmente: Eliminar contradicciones y simplificar
